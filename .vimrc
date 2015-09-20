@@ -18,7 +18,13 @@ set modelines=1
 set smartindent
 set nocompatible
 set laststatus=2
+set cursorline
+set cursorcolumn
+
 "}}}
+
+"Cursor
+ nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " Rainbow Parentheses
 let g:rbpt_colorpairs = [
@@ -41,6 +47,10 @@ let g:rbpt_colorpairs = [
     \ ]
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+au VimEnter * RainbowParenthesesToggle
 
 " Pathogen {{{
 execute pathogen#infect()
