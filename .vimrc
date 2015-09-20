@@ -81,4 +81,7 @@ let g:airline_symbols.linenr = ''
 let g:syntastic_python_pyflakes_executable = 'pyflakes'
 let g:syntastic_java_javac_executable = 'javac'
 
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+let g:ycm_global_ycm_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
 set encoding=utf-8
