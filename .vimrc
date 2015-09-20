@@ -9,8 +9,8 @@ syntax enable
 set number
 set t_Co=256
 set background=dark
-let g:hybrid_use_Xresources = 1
 colorscheme hybrid
+let g:hybrid_use_Xresources = 1
 " }}}
 
 " Spaces and Tabs {{{
