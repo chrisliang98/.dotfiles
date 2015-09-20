@@ -3,8 +3,7 @@
     set number
     set t_Co=256
     set background=dark
-    let g:hybrid_use_Xresources = 1
-    colorscheme hybrid
+    colorscheme elda 
 " }}}
 
 " Spaces and Tabs {{{
@@ -21,6 +20,8 @@
     set cursorline
     set cursorcolumn
     set wildmenu
+    let g:indent_guides_start_level = 4
+    let g:inden_guides_guide_side = 1
 " }}}
 
 " Movement {{{
@@ -35,7 +36,6 @@
 " Cursor {{{
      nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 " }}}
-
 " Rainbow Parentheses {{{
     let g:rbpt_colorpairs = [
         \ ['brown',       'RoyalBlue3'],
