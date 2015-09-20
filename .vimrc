@@ -1,3 +1,9 @@
+set encoding=utf-8
+
+" Pathogen {{{
+execute pathogen#infect()
+"}}}
+
 " Colors {{{
 syntax enable
 set number
@@ -20,13 +26,9 @@ set nocompatible
 set laststatus=2
 set cursorline
 set cursorcolumn
-
 "}}}
 
-"Cursor
- nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-
-" Rainbow Parentheses
+" Rainbow Parentheses {{{
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
     \ ['Darkblue',    'SeaGreen3'],
@@ -51,12 +53,13 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 au VimEnter * RainbowParenthesesToggle
-
-" Pathogen {{{
-execute pathogen#infect()
 "}}}
 
+" NERDTree {{{
 let g:NERDTreeDirArrows=0
+"}}}
+
+" Airline {{{
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extension#syntastic#enabled = 1
@@ -65,7 +68,6 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" unicode symbols
 let g:airline_left_sep = '>>'
 let g:airline_left_sep = '?'
 let g:airline_right_sep = '<<'
@@ -78,7 +80,6 @@ let g:airline_symbols.paste = '?'
 let g:airline_symbols.paste = '?'
 let g:airline_symbols.paste = '?'
 let g:airline_symbols.whitespace = '?'
-"More symbols
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
@@ -86,12 +87,13 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+"}}}
 
-"Syntastic Checkers
+"Syntastic {{{
 let g:syntastic_python_pyflakes_executable = 'pyflakes'
 let g:syntastic_java_javac_executable = 'javac'
 
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 let g:ycm_global_ycm_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"}}}
 
-set encoding=utf-8
