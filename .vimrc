@@ -22,6 +22,10 @@
     set wildmenu
     let g:indent_guides_start_level = 4
     let g:inden_guides_guide_side = 1
+    inoremap ( ()<Esc>i
+    inoremap { {}<Esc>i
+    inoremap [ []<Esc>i
+
 " }}}
 
 " Movement {{{
